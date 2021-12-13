@@ -13,5 +13,5 @@ export default NextAuth({
             }
         }),
     ],
-    secret: 'QjjgfBrTWIGt+UoB0JlTOewnFkd1ikf40XCEWUtHGAs='
+    secret: process.env.SECRET
 })
