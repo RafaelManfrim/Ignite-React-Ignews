@@ -11,6 +11,7 @@ export default NextAuth({
                   scope: 'read:user',
                 },
             }
-        })
-    ]
+        }),
+    ],
+    secret: 'QjjgfBrTWIGt+UoB0JlTOewnFkd1ikf40XCEWUtHGAs='
 })
