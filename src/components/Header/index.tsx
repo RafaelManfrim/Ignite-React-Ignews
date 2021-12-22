@@ -1,5 +1,6 @@
 import { SignInButton } from '../SignInButton';
 import styles from './styles.module.scss';
+import { NavLink } from '../NavLink'
 
 export const Header = () => {
     return (
@@ -7,8 +8,8 @@ export const Header = () => {
             <div className={styles.headerContent}>
                 <img src="/images/logo.svg" alt="Logo Ignews" />
                 <nav>
-                    <a href="" className={styles.active}>Home</a>
-                    <a href="">Posts</a>
+                    <NavLink url='/' title="Home" active={styles.active}/>
+                    <NavLink url='/posts' title="Posts" active={styles.active}/>
                 </nav>
                 <SignInButton />
             </div>
