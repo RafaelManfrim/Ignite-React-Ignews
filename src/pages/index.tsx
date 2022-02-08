@@ -6,7 +6,7 @@ import { stripe } from '../services/stripe'
 
 type HomeProps = {
   product: {
-    amount: number
+    amount: string
   }
 }
 
