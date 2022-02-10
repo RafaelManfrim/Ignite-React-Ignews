@@ -9,11 +9,10 @@ type NavLinkProps = {
 
 export function NavLink({ url, title, active }: NavLinkProps) {
     const { asPath } = useRouter()
-    console.log(url, asPath)
 
     return (
         <Link href={url}>
-            <a className={asPath === url ? active : ''}>{title}</a>
+            <a className={url === asPath ? active : ''}>{title}</a>
         </Link>
     )
 }
