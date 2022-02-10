@@ -4,6 +4,8 @@ import { Async } from "."
 test("It renders correctly", async () => {
     render(<Async />)
 
+    screen.logTestingPlaygroundURL()
+
     expect(screen.getByText("Hello World")).toBeInTheDocument()
     // expect(await screen.findByText("Button", {}, { timeout: 3000 })).toBeInTheDocument()
 
