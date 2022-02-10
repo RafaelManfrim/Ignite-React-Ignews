@@ -10,11 +10,7 @@ export default NextAuth({
         GitHubProvider({
             clientId: process.env.USER_GITHUB_CLIENT_ID,
             clientSecret: process.env.USER_GITHUB_CLIENT_SECRET,
-            authorization: {
-                params: {
-                  scope: 'read:user'
-                }
-            }
+            authorization: "https://github.com/login/oauth/authorize?scope=read:user+user:email"
         })
     ],
     callbacks: {
