@@ -28,7 +28,7 @@ const relevantEvents = new Set([
 /* eslint-disable import/no-anonymous-default-export */
 export default async (req: NextApiRequest, res: NextApiResponse) => {
     if(req.method === 'POST') {
-        const buf = await buffer(req)
+        const buf = await buffer(req.body)
         const secret = req.headers['stripe-signature']
 
         let event: Stripe.Event
